@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1px 0 var(--color-border);
+  backdrop-filter: blur(8px);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-brand);
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLink {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  transition: color var(--transition-base);
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-brand);
+  transition: width var(--transition-base);
+}
+
+.navLink:hover {
+  color: var(--color-brand);
+}
+
+.navLink:hover::after,
+.navLinkActive::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  color: var(--color-brand);
+}
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+  padding: 4px 0;
+}
+
+.menuBtn span {
+  display: block;
+  height: 1px;
+  background: var(--color-primary);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menuBtnOpen span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menuBtnOpen span:nth-child(2) {
+  opacity: 0;
+}
+.menuBtnOpen span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .menuBtn {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,264 @@
+.page {}
+
+.pageHeader {
+  padding: 6rem 0 5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pageHeader .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+}
+
+.pageDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 2;
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 4rem;
+}
+
+.philosophyBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.philosophyTitle {
+  margin-bottom: 0.5rem;
+}
+
+.philosophyEn {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-brand);
+  letter-spacing: 0.02em;
+}
+
+.philosophyText {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 2.2;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNum {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-brand);
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.historySection {
+  background: var(--color-off-white);
+}
+
+.sectionHeader {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 80px 1px 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timelineItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.timelineYear {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--color-brand);
+  padding-top: 0.2rem;
+}
+
+.timelineDot {
+  position: relative;
+  width: 1px;
+  background: var(--color-border);
+  align-self: stretch;
+}
+
+.timelineDot::before {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-brand);
+}
+
+.timelineEvent {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 1.8;
+  padding-top: 0.2rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.memberAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.memberInitial {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-brand);
+}
+
+.memberName {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.memberRole {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+}
+
+.memberBio {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 1.9;
+}
+
+.companySection {
+  background: var(--color-off-white);
+}
+
+.companyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.companyRow {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.companyRow:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.companyLabel {
+  padding: 1.5rem 0;
+  padding-right: 3rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  vertical-align: top;
+  white-space: nowrap;
+  width: 160px;
+}
+
+.companyValue {
+  padding: 1.5rem 0;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 1.9;
+}
+
+@media (max-width: 1024px) {
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineItem {
+    grid-template-columns: 60px 1fr;
+  }
+  .timelineDot {
+    display: none;
+  }
+}
