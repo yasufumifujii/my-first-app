@@ -1,0 +1,276 @@
+.page {}
+
+/* Page Header */
+.pageHeader {
+  padding: 6rem 0 5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageHeader .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+}
+
+.pageDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 2;
+}
+
+/* Services List */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.serviceItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.serviceItemReverse {
+  direction: rtl;
+}
+.serviceItemReverse > * {
+  direction: ltr;
+}
+
+.serviceVisual {
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceNumber {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(0,0,0,0.06);
+  line-height: 1;
+}
+
+.serviceEnName {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgba(0,0,0,0.3);
+  letter-spacing: 0.04em;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.serviceNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.serviceName {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+}
+
+.badge {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-white);
+  background: var(--color-brand);
+  padding: 0.25rem 0.6rem;
+}
+
+.serviceDesc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 2;
+}
+
+.serviceDetails {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.serviceDetail {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.detailBullet {
+  color: var(--color-brand);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+/* Products */
+.productsSection {
+  background: var(--color-off-white);
+}
+
+.sectionHeader {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  background: var(--color-white);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.productCard:hover {
+  border-color: var(--color-brand);
+  transform: translateY(-4px);
+}
+
+.productHeader {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.productName {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-brand);
+  letter-spacing: 0.02em;
+}
+
+.productDesc {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 1.9;
+}
+
+.productTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.productTag {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.2rem 0.6rem;
+}
+
+.productLink {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+}
+
+/* CTA */
+.cta {
+  padding: 8rem 0;
+  background: var(--color-light);
+}
+
+.ctaInner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ctaTitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.ctaText {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--color-secondary);
+  line-height: 2;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  transition: background var(--transition-base);
+}
+
+.ctaBtn:hover {
+  background: #122d48;
+}
+
+@media (max-width: 1024px) {
+  .serviceItem {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .serviceItemReverse {
+    direction: ltr;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}
